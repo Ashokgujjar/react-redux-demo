@@ -1,26 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Posts from "./components/Posts";
+// import axios from "axios";
+import { Provider } from "react-redux";
+import store from "./store";
 
 class App extends Component {
+  // componentDidMount = () => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/posts")
+  //     .then(response => {
+  //       this.setState({ posts: response.data });
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Posts />
+        </div>
+      </Provider>
     );
   }
 }
