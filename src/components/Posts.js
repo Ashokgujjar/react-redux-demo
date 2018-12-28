@@ -21,9 +21,11 @@ class Posts extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  posts: state.posts.posts || []
-});
+const mapStateToProps = state => {
+  return {
+    posts: state.posts.posts || []
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchData: id => {

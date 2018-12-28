@@ -6,17 +6,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 class App extends Component {
-  // componentDidMount = () => {
-  //   axios
-  //     .get("https://jsonplaceholder.typicode.com/posts")
-  //     .then(response => {
-  //       this.setState({ posts: response.data });
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // };
-
   render() {
     return (
       <Provider store={store}>
